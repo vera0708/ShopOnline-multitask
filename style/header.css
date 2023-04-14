@@ -1,0 +1,19 @@
+.header__container {
+    margin-top: 30px;
+    margin-bottom: 90px;
+    display: flex;
+    gap: 97px;
+}
+
+.header__img {
+    display: inline-grid;
+}
+
+.header__list {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #2D2D2D;
+}
