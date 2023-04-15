@@ -1,12 +1,28 @@
+header {
+    display: grid;
+}
+
 .header__container {
     margin-top: 30px;
     margin-bottom: 90px;
-    display: flex;
-    gap: 97px;
+    /* gap: 89px; */
 }
 
 .header__img {
     display: inline-grid;
+}
+
+.header__button {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #3670C7;
+    border-radius: 10px;
+}
+
+.header__search {
+    flex-basis: 40%;
 }
 
 .header__list {
