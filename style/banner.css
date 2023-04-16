@@ -1,0 +1,145 @@
+.banner {
+    background-image: url('../img/banner.png');
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.banner__container {
+    margin: 40px 112px;
+    flex-grow: 1;
+}
+
+.banner__promotion-text {
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 105px;
+    margin-bottom: 100px;
+}
+
+.banner__timer {
+    text-align: center;
+}
+
+.banner__timer-text {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.banner__timer-time {
+    display: inline-flex;
+    gap: 30px;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.banner__timer-big {
+    font-size: 60px;
+}
+
+@media(max-width: 1024px) {
+    .banner {
+        background-image: url('../img/img_1024/banner_1024.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 314px;
+        margin-bottom: 60px;
+    }
+
+    .banner__container {
+        margin: 36px 79.7px;
+    }
+
+    .banner__promotion-text {
+        font-size: 40px;
+        max-width: 360px;
+        margin-top: 44px;
+        margin-bottom: 11px;
+    }
+
+    .banner__timer-text {
+        margin-bottom: 10px;
+    }
+
+    .banner__timer-time {
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .banner__timer-big {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    .banner {
+        background-image: url('../img/img_768/banner_768.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 280px;
+        margin-bottom: 40px;
+    }
+
+    .banner__container {
+        margin: 33px 80px;
+    }
+
+    .banner__promotion-text {
+        font-size: 30px;
+        margin-top: 34px;
+        margin-bottom: 82px;
+    }
+
+    .banner__timer-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .banner__timer-time {
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .banner__timer-big {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 320px) {
+    .banner {
+        background-image: url('../img/img_320/banner_320.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 340px;
+        margin-bottom: 20px;
+    }
+
+    .banner__container {
+        margin: 29px 30px;
+    }
+
+    .banner__promotion-text {
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 21px;
+        margin-bottom: 189px;
+    }
+
+    .banner__timer-text {
+        font-size: 8px;
+        margin-bottom: 6px;
+    }
+
+    .banner__timer-time {
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .banner__timer-big {
+        font-size: 20px;
+    }
+}
