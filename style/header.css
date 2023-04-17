@@ -1,35 +1,197 @@
-header {
-    display: grid;
-}
-
 .header__container {
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 90px;
-    /* gap: 89px; */
+    display: grid;
+    grid-template-areas:
+        "logo button search menu";
+    grid-template-columns: 190px 151px 754px 354px;
+    gap: 97px;
+    align-items: center;
 }
 
 .header__img {
-    display: inline-grid;
+    grid-area: logo;
 }
 
 .header__button {
+    grid-area: button;
     font-weight: 400;
     font-size: 22px;
     line-height: 1.5;
     color: #fff;
     background-color: #3670C7;
     border-radius: 10px;
+    padding: 9px 28px 12px 61px;
+    background-image: url('../img/icon/menu-icon.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 33px;
+}
+
+.header__button:hover {
+    background-color: #637d9e;
+    font-weight: 600;
+    transition-duration: 1s;
 }
 
 .header__search {
-    flex-basis: 40%;
+    grid-area: search;
+    background: #EFEFEF;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #8F8F8F;
+    padding: 15px 560px 18px 40px;
+    border: none;
+    background-image: url('../img/icon/header-search.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    outline: #637d9e;
 }
 
 .header__list {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-weight: 700;
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 61px);
+    gap: 70px;
+    justify-items: center;
+}
+
+.header__icon {
+    padding-top: 40px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 36px;
+    font-weight: 600;
     font-size: 16px;
-    line-height: 1.3;
     color: #2D2D2D;
+}
+
+.header__icon-person {
+    background-image: url('../img/icon/header-person.svg');
+}
+
+.header__icon-cart {
+    background-image: url('../img/icon/header-shopping_cart.svg');
+}
+
+.header__icon-favorite {
+    background-image: url('../img/icon/header-favorite.svg');
+}
+
+.header__link:hover {
+    color: #3670C7;
+    text-decoration: underline;
+}
+
+@media(max-width: 1024px) {
+    .header__container {
+        margin-top: 37px;
+        margin-bottom: 60px;
+        grid-template-areas:
+            "logo menu"
+            "button search";
+        grid-template-columns: 190px 685px;
+        gap: 34px 50px;
+    }
+
+    .header__list {
+        gap: 40px;
+        justify-content: end;
+    }
+
+    .header__button {
+        max-width: 151px;
+    }
+}
+
+@media(max-width: 768px) {
+    .header__container {
+        margin-top: 27.5px;
+        margin-bottom: 50px;
+        grid-template-columns: 165px 535px;
+        gap: 29px 0px;
+    }
+
+    .header__img {
+        width: 165px;
+    }
+
+    .header__list {
+        grid-template-columns: repeat(auto-fit, 62px);
+        gap: 30px;
+    }
+
+    .header__icon {
+        padding-top: 30px;
+        background-size: 30px;
+        font-size: 12px;
+    }
+
+    .header__button {
+        max-width: 115px;
+        border-radius: 6px;
+        font-size: 16px;
+        padding: 7px 21px 11px 49px;
+        background-position-x: 24px;
+        background-size: 16px;
+    }
+
+    .header__search {
+        font-size: 12px;
+        padding: 11px 460px 15px 30px;
+        background-size: 82px;
+    }
+}
+
+@media(max-width: 320px) {
+    .header__container {
+        margin-top: 20px;
+        margin-bottom: 41px;
+
+        grid-template-areas:
+            "logo ."
+            "button menu"
+            "search .";
+        grid-template-columns: 114px 130px;
+        grid-template-rows: 25px 30px 30px;
+        gap: 20px 36px;
+    }
+
+    .header__img {
+        width: 114px;
+    }
+
+    .header__button {
+        max-width: 79px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 5px 14px 7px 31px;
+        background-position-x: 16.7px;
+        background-size: 12px;
+    }
+
+    .header__list {
+        grid-template-columns: repeat(auto-fit, 30px);
+        align-content: start;
+        gap: 20px;
+    }
+
+    .header__icon {
+        padding-top: 30px;
+        background-size: 30px;
+        font-size: 7px;
+        color: #fff;
+    }
+
+    /* .header__link {
+        font-size: 10px;
+    } */
+
+    .header__search {
+        font-size: 8px;
+        padding: 9px 255px 9px 16px;
+        background-size: 50px;
+    }
 }
