@@ -77,7 +77,7 @@
     position: absolute;
     background-color: #38C0EB;
     border-radius: 20px;
-    width: 510px;
+    max-width: 510px;
     height: 178px;
     padding: 26px 43px 26px 23px;
     font-size: 40px;
@@ -181,7 +181,8 @@
 .gallery__item-white-box {
     background-color: #FFFFFF;
     border-radius: 20px;
-    width: 643px;
+    max-width: 643px;
+    padding: 32px 41px;
     height: 115px;
     display: inline-flex;
     align-items: center;
@@ -236,7 +237,7 @@
     }
 
     .gallery__item-blue-box {
-        width: 414px;
+        max-width: 414px;
         height: 146px;
         padding: 29px 25px;
         font-size: 30px;
@@ -324,7 +325,8 @@
 
     .gallery__item-white-box {
         border-radius: 16px;
-        width: 513px;
+        max-width: 513px;
+        padding: 24px 46px;
         height: 83px;
         font-size: 30px;
     }
@@ -383,7 +385,7 @@
     }
 
     .gallery__item-blue-box {
-        width: 360px;
+        max-width: 360px;
         border-radius: 12px;
         height: 61px;
         padding: 22px 28px 16px;
@@ -451,7 +453,8 @@
 
     .gallery__item-white-box {
         border-radius: 12px;
-        width: 347px;
+        max-width: 347px;
+        padding: 22px 33px;
         height: 68px;
         font-size: 20px;
     }
@@ -499,7 +502,7 @@
     }
 
     .gallery__item-blue-box {
-        width: 260px;
+        max-width: 260px;
         border-radius: 12px;
         height: 36px;
         padding: 9px 25px;
@@ -590,7 +593,8 @@
 
     .gallery__item-white-box {
         border-radius: 6px;
-        width: 250px;
+        max-width: 250px;
+        padding: 8px 41px;
         height: 30px;
         font-size: 12px;
         padding: 7px 41px;
