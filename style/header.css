@@ -1,5 +1,5 @@
 .header__container {
-    margin-top: 25px;
+    padding-top: 25px;
     margin-bottom: 90px;
     display: grid;
     grid-template-areas:
@@ -201,8 +201,14 @@
     .header__icon {
         padding-top: 30px;
         background-size: 30px;
-        font-size: 7px;
-        color: #fff;
+        /* font-size: 7px; */
+        width: 30px;
+        height: 30px;
+        /* color: #fff; */
+    }
+
+    .header__link {
+        display: none;
     }
 
     .header__search {
