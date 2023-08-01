@@ -58,6 +58,7 @@ p,
 figure,
 fieldset {
     margin: 0;
+    padding: 0;
 }
 
 iframe {
@@ -89,9 +90,16 @@ fieldset {
     margin: 0 auto;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1760px) {
     .container {
-        max-width: 1024px;
+        max-width: 1700px;
+        padding: 0 55px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container {
+        max-width: 1200px;
         padding: 0 42px;
     }
 }
@@ -103,9 +111,9 @@ fieldset {
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 520px) {
     .container {
-        max-width: 320px;
+        max-width: 520px;
         padding: 0 20px;
     }
 }

@@ -14,6 +14,7 @@
     position: relative;
     display: flex;
     font-size: 30px;
+    border-radius: 20px;
 }
 
 .gallery__item-circle {
@@ -55,7 +56,6 @@
 }
 
 .gallery__item--102-text {
-    /* max-width: 190px; */
     font-size: 30px;
 }
 
@@ -121,7 +121,6 @@
 }
 
 .gallery__item--106-text {
-    /* max-width: 190px; */
     font-size: 40px;
 }
 
@@ -134,6 +133,7 @@
     grid-column: 5 / 6;
     grid-row: 3 / 5;
     background-image: url('../img/Rectangle107.png');
+    border-radius: 20px;
 }
 
 .gallery__item--107-circle {
@@ -165,6 +165,7 @@
     grid-column: 6 / 7;
     grid-row: 4 / 5;
     background-image: url('../img/Rectangle109.png');
+    border-radius: 20px;
 }
 
 .gallery__item--110 {
@@ -194,7 +195,34 @@
     text-transform: uppercase;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1760px) {
+    .gallery__item {
+        border-radius: 16px;
+    }
+
+    .gallery__item--101-text {
+        font-size: 30px;
+    }
+
+    .gallery__item--102-text {
+        font-size: 24px;
+    }
+
+    .gallery__item-blue-box {
+        font-size: 30px;
+    }
+
+    .gallery__item--106-text {
+        font-size: 30px;
+        max-width: 250px;
+    }
+
+    .gallery__item--108-text {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 1220px) {
     .gallery {
         min-height: 1382px;
         grid-template-columns: repeat(4, 1fr);
@@ -210,7 +238,6 @@
     }
 
     .gallery__item--101-text {
-        font-size: 30px;
         line-height: 1.2;
     }
 
@@ -219,10 +246,6 @@
         grid-row: 1 / 2;
         padding-top: 58px;
         padding-left: 9px;
-    }
-
-    .gallery__item--102-text {
-        font-size: 24px;
     }
 
     .gallery__item--102-circle {
@@ -240,7 +263,6 @@
         max-width: 414px;
         height: 146px;
         padding: 29px 25px;
-        font-size: 30px;
         line-height: 1.5;
     }
 
@@ -274,10 +296,6 @@
         padding-left: 20px;
     }
 
-    .gallery__item--106-text {
-        font-size: 30px;
-    }
-
     .gallery__item--106-circle {
         bottom: 10px;
         right: 10px;
@@ -286,7 +304,6 @@
     .gallery__item--107 {
         grid-column: 3 / 4;
         grid-row: 3 / 5;
-        background-size: cover;
     }
 
     .gallery__item--107-circle {
@@ -332,7 +349,7 @@
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 970px) {
     .gallery {
         min-height: 977px;
         grid-template-columns: repeat(2, 1fr) 220px 1fr;
@@ -343,6 +360,7 @@
 
     .gallery__item {
         font-size: 16px;
+        border-radius: 12px;
     }
 
     .gallery__item-circle {
@@ -460,7 +478,25 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 720px) {
+    .gallery__item--101-text {
+        max-width: 65px;
+        font-size: 16px;
+    }
+
+    .gallery__item-blue-box {
+        max-width: 290px;
+        height: 36px;
+        padding: 9px 25px;
+        font-size: 14px;
+    }
+
+    .gallery__item--108-text {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 520px) {
     .gallery {
         min-height: 1287px;
         grid-template-columns: repeat(2, 1fr);
@@ -468,15 +504,14 @@
         margin-bottom: 234px;
     }
 
+    .gallery__item {
+        border-radius: 8px;
+    }
+
     .gallery__item--101 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         padding-bottom: 10px;
-    }
-
-    .gallery__item--101-text {
-        max-width: 65px;
-        font-size: 16px;
     }
 
     .gallery__item--102 {
@@ -503,11 +538,7 @@
 
     .gallery__item-blue-box {
         max-width: 260px;
-        border-radius: 12px;
-        height: 36px;
-        padding: 9px 25px;
         font-size: 12px;
-        line-height: 1.1;
     }
 
     .gallery__item--104 {
@@ -552,6 +583,7 @@
         grid-column: 1 / 2;
         grid-row: 7 / 9;
         background-image: url('../img/img_320/Rectangle107_320.png');
+        background-size: contain;
     }
 
     .gallery__item--107-circle {
@@ -564,10 +596,6 @@
         grid-row: 7 / 8;
         padding-bottom: 10px;
         padding-left: 9px;
-    }
-
-    .gallery__item--108-text {
-        font-size: 12px;
     }
 
     .gallery__item--108-circle {
@@ -589,6 +617,7 @@
         justify-content: center;
         padding: 0;
         padding-bottom: 10px;
+        background-size: contain;
     }
 
     .gallery__item-white-box {
