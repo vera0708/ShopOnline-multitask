@@ -1,7 +1,4 @@
-const declOfNum = (n, titles) => n + ' ' + titles[n % 10 === 1 && n % 100 !== 11 ?
-    0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
-
-const addZero = (n) => n < 10 ? '0' + n : n;
+import { addZero, declOfNum } from "./utilites.js";
 
 const timer = () => {
     let deadL = document.querySelector('[data-timer-deadline]');
@@ -19,21 +16,23 @@ const timer = () => {
     timeSecCount.textContent = '00';
     timerSec.append(timeSecCount);
 
-    console.log(deadLine);
+    console.log('deadLine: ', deadLine);
+
     const getTimeRemaning = () => {
         const dataStop = new Date(deadLine).getTime();
-        console.log('dataStop', dataStop);
-        // const today = new Date();
+        const dataStopX = new Date(deadLine);
+        console.log(' dataStopX: ', dataStopX.getTimezoneOffset());
         const today = Date.now();
+
         const timeRemaining = ((dataStop - today) / 1000);
 
-        // const seconds = Math.floor(timeRemaining % 60);
+        const seconds = Math.floor(timeRemaining % 60);
         const minutes = addZero(Math.floor((timeRemaining / 60) % 60));
         const hours = addZero(Math.floor((timeRemaining / 60 / 60) % 24));
         const days = addZero(Math.floor((timeRemaining / 60 / 60 / 24) % 30));
         // const months = Math.floor((timeRemaining / 60 / 60 / 24 / 30) % 12);
         console.log(days, hours, minutes);
-        return { timeRemaining, minutes, hours, days }
+        return { timeRemaining, minutes, hours, days, seconds }
     }
 
     const startTimer = () => {
@@ -42,15 +41,19 @@ const timer = () => {
         const dayContent = declOfNum(timer.days, ['день', 'дня', 'дней']);
         const hourContent = declOfNum(timer.hours, ['час', 'часа', 'часов']);
         const minContent = declOfNum(timer.minutes, ['минута', 'минуты', 'минут']);
-        // const secContent = declOfNum(seconds, ['секунда', 'секунды', 'секунд']);
+        const secContent = declOfNum(timer.seconds, ['секунда', 'секунды', 'секунд']);
 
-        timerDay.textContent = dayContent;
-        timerHour.textContent = hourContent;
-        timerMin.textContent = minContent;
-        // timerSec.textContent = secContent;
+        if (timer.days >= 1) {
+            timerDay.textContent = dayContent;
+            timerHour.textContent = hourContent;
+            timerMin.textContent = minContent;
+        } else {
+            timerDay.textContent = hourContent;
+            timerHour.textContent = minContent;
+            timerMin.textContent = secContent;
+        }
 
         const intervalId = setTimeout(startTimer, 1000);
-        // timerCount.textContent = `${m}  ${d}  ${h}  ${min}  ${sec}`;
 
         if (timer.timeRemaining <= 0) {
             clearTimeout(intervalId);
