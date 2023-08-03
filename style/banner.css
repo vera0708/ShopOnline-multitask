@@ -1,6 +1,6 @@
 .banner {
     background-image: url('../img/banner.png');
-    max-height: 480px;
+    min-height: 480px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,10 +42,8 @@
 @media(max-width: 1200px) {
     .banner {
         background-image: url('../img/img_1024/banner_1024.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        max-height: 314px;
-        margin-bottom: 60px;
+        min-height: 314px;
+        /* max-height: 314px; */
     }
 
     .banner__promotion {
@@ -78,9 +76,8 @@
 @media(max-width: 970px) {
     .banner {
         background-image: url('../img/img_768/banner_768.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        max-height: 280px;
+        min-height: 280px;
+        /* max-height: 280px; */
         margin-bottom: 40px;
     }
 
@@ -115,9 +112,8 @@
 @media(max-width: 520px) {
     .banner {
         background-image: url('../img/img_320/banner_320.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        max-height: 340px;
+        min-height: 340px;
+        /* max-height: 340px; */
         margin-bottom: 20px;
     }
 

@@ -3,7 +3,7 @@ import { addZero, declOfNum } from "./utilites.js";
 const timer = () => {
     let deadL = document.querySelector('[data-timer-deadline]');
     let deadLine = deadL.dataset.timerDeadline;
-    const bannerTimer = document.querySelector('.banner__timer-time');
+    const bannerTimer = document.querySelector('.banner__timer');
     const timerFirst = document.querySelector('.banner__timer-day');
     const timerSecond = document.querySelector('.banner__timer-hour');
     const timerThird = document.querySelector('.banner__timer-min');
