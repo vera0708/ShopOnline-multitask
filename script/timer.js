@@ -4,8 +4,7 @@ import { addZero, declOfNum } from "./utilites.js";
 
 // const addZero = (n) => n < 10 ? '0' + n : n;
 
-export const timer = () => {
-    let deadL = document.querySelector('[data-timer-deadline]');
+export const timer = (deadL) => {
     let deadLine = deadL.dataset.timerDeadline;
     const bannerTimer = document.querySelector('.banner__timer');
     const timerFirst = document.querySelector('.banner__timer-day');
